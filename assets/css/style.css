@@ -1,0 +1,120 @@
+/* @mbshackford | MIT Licensed */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'sono', sans-serif;
+    font-weight: normal;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #0099ff5f, #0059ffd0);
+}
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height:100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator-grid > button {
+    cursor: pointer;
+    font-size:2rem;
+    border:1px solid white;
+    outline:none;
+    background: rgba(255,255,255, .55);
+}
+.calculator-grid > button:hover{
+    background: rgba(255,255,255, .90);
+}
+.span-two {
+    grid-column: span 2;
+}
+.output {
+    grid-column: 1 / -1;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    align-items:flex-end;
+    justify-content: space-around;
+    flex-direction:column;
+    padding:10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand {
+    color: rgba(255,255,255,.75);
+    font-size:1.5rem;
+}
+.output .current-operand {
+    color: rgba(255,255,255);
+    font-size:2.5rem;
+}
+
+
+
+
+
+
+
+/*
+} 
+@media (max-width: 1024px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    border-radius: 5px;;
+    background: var(--background-blue);
+    color: var(--slate-blue-med);
+    right: 0;
+    left: 0;
+    text-align: center;
+    line-height: 2.5em;
+}
+@media (min-width: 720px){
+    body {
+        font-size: 1em;
+    }
+    .flex-container h1 {
+        font-size: 3em;
+    }
+    .container span img {
+        min-width: 30%;
+        max-width: 40%;
+    }
+}
+/* Media Queries 
+ {
+    margin-bottom: 2em;
+}
+    @media screen and (max-width: 1280px) {
+        .mini-posts {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100% + 2em);
+        }
+            .mini-posts > * {
+                margin: 2em 2em 0 0;
+                width: calc(50% - 2em);
+            }
+            .mini-posts > :nth-child(-n + 2) {
+                margin-top: 0;
+            }       
+        }
+    @media screen and (max-width: 480px) {
+        .mini-posts {
+            display: block;
+            width: 100%;
+        }
+            .mini-posts > * {
+                margin: 0 0 2em 0;
+                width: 100%;
+            }
+        }
+/* footer */
+/* 
+footer {
+    margin-top: 30em;
+} */

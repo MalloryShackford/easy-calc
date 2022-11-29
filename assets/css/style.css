@@ -26,13 +26,16 @@ a:hover {
 header {
     display:flex;
     justify-content: center;
+    flex-wrap:wrap;
+    text-align:center;
     text-transform: uppercase;
     margin: 2em 0 1em 0;
 }
 
 .container {
-    max-width:100vw;
-    max-height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
 .calculator-grid {
     display: grid;
@@ -86,3 +89,8 @@ footer {
     align-items: center;
 }
 
+@media(max-width: 540px){
+   .calculator-grid {
+    max-width: 220px;
+   }
+   }
